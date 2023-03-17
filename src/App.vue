@@ -1,13 +1,17 @@
 <script setup lang="ts">
+import { NConfigProvider } from 'naive-ui'
 import ChatView from '@/pages/ChatView.vue'
 </script>
 
 <template>
-  <n-config-provider :theme-overrides="{ common: { fontWeightStrong: '600' } }">
+  <NConfigProvider :theme-overrides="{ common: { fontWeightStrong: '600' } }" class="h-full">
     <ChatView />
-  </n-config-provider>
+  </NConfigProvider>
 </template>
 
-<style scoped>
-
+<style>
+#app {
+  height: 100vh;
+  background: #010409;
+}
 </style>
